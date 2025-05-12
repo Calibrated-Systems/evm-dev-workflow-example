@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Wallet\keystore\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+	<Compile Include="Contracts/SimpleStorage/ContractDefinition/SimpleStorageDefinition.gen.fs" />
+	<Compile Include="Contracts/SimpleStorage/SimpleStorageService.gen.fs" />
+    <Compile Include="WalletManager.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nethereum.Accounts" Version="4.29.0" />
+    <PackageReference Include="Nethereum.Autogen.ContractApi" Version="4.29.0" />
+    <PackageReference Include="Nethereum.HdWallet" Version="4.29.0" />
+    <PackageReference Include="Nethereum.KeyStore" Version="4.29.0" />
+    <PackageReference Include="Nethereum.Web3" Version="4.29.0" />
+  </ItemGroup>
+
+</Project>
