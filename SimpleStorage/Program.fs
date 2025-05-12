@@ -83,9 +83,9 @@ let main argv =
         // Deploy contract
         printfn "Deploying contract..."
         try
-            (*let contractAddress = deployContract(web3)
-            printfn $"Contract deployed at: {contractAddress}"*)
-            let contractAddress = "0xc29dd4d8423cc1ae4f7fa1a5f4ae585eb0747f27"
+            let contractAddress = deployContract(web3)
+            printfn $"Contract deployed at: {contractAddress}"
+            //let contractAddress = ""
             
             // Get value
             printfn "Getting value..."
@@ -93,8 +93,8 @@ let main argv =
             printfn $"Stored value: {value}"
             
             // Set value
-            (*printfn "Setting value to 48..."
-            setStoredValue web3 contractAddress 48 |> Async.AwaitTask |> Async.RunSynchronously |> ignore*)
+            printfn "Setting value to 48..."
+            setStoredValue web3 contractAddress 48 |> Async.AwaitTask |> Async.RunSynchronously |> ignore
             
             printfn "Done!"
             0
